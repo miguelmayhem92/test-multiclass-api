@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 from multiclass_model.config.core import config
 from multiclass_model.processing.data_manager import load_dataset
 
-from application.main import application
+from application.main import app
 
 
 @pytest.fixture(scope="module")
