@@ -8,6 +8,7 @@ from loguru import logger
 from application.api import api_router
 from application.config import settings, setup_app_logging
 
+
 # setup logging as early as possible
 setup_app_logging(config=settings)
 
@@ -55,5 +56,5 @@ if __name__ == "__main__":
     logger.warning("Running in development mode. Do not run like this in production.")
     import uvicorn
 
-    uvicorn.run(app, host="localhost", port=8001, log_level="debug")
+    uvicorn.run(app, host="localhost", port=8001, log_level="debug", debug=True)
     #uvicorn.run(app, debug=True)
